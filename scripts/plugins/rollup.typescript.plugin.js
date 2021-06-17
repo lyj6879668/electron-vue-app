@@ -105,7 +105,7 @@ const create = ({ tsconfig, tsconfigOverride, wait } = {}) => {
   }
   const createProgram = createSemanticDiagnosticsBuilderProgram
 
-  wait = wait ?? true
+  wait = (wait === null || wait === undefined) ? true : wait
 
   /**
    * @type {import('typescript').FormatDiagnosticsHost}
